@@ -1,0 +1,27 @@
+models:
+  - name: fct_orders
+    description: Fact table containing order-level details including order ID, customer ID, order status, and total amount.
+    columns:
+      - name: order_id
+        description: The unique identifier for the order.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: The unique identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: order_status
+        description: The current status of the order (e.g., delivered, shipped, canceled).
+      - name: order_purchase_timestamp
+        description: The timestamp when the order was purchased.
+      - name: total_price 
+        description: The total price of the order.
+      - name: total_freight
+        description: The total freight cost associated with the order.  
+      - name: total_payment
+        description: The total payment amount for the order.
+      - name: max_installments
+        description: The maximum number of installments chosen for the payment.
+      - name: avg_review_score
+        description: The average review score given by the customer for the order.

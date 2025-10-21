@@ -1,0 +1,28 @@
+models:
+  - name: dim_geography
+    description: Enriched geolocation data combining geolocation details with customer information.
+    columns:
+      - name: zip_code
+        description: The zip code prefix of the geolocation.
+        tests:
+          - not_null
+      - name: latitude
+        description: The latitude of the geolocation.
+        tests:
+          - not_null
+      - name: longitude
+        description: The longitude of the geolocation.
+        tests:
+          - not_null
+      - name: city
+        description: The city of the geolocation.
+        tests:
+          - not_null  
+      - name: state
+        description: The state of the geolocation.
+        tests:
+          - not_null
+      - name: nb_customers
+        description: The number of customers associated with the geolocation.
+      - name: nb_sellers
+        description: The number of sellers associated with the geolocation.
