@@ -11,16 +11,8 @@ snapshot-paths: ["snapshots"]
 
 models:
   staging:
-    materialized: view
+    +materialized: view
   compute:
-    materialized: table
+    +materialized: table
   published:
-    materialized: table
-
-seeds:
-  your_seed_name:
-    file: seed_data.csv
-
-snapshots:
-  your_snapshot_name:
-    target: snapshot.sql
+    +materialized: table

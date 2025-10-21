@@ -1,6 +1,57 @@
 dbt-fusion 2.0.0-preview.45
-   Loading ~/.dbt/profiles.yml
-error: dbt1001: Profile 'postgres_env' not found in profiles.yml
+   Loading profiles.yml
+   Loading packages.yml
+error: dbt9002: Unexpected Result: execution error: Configuration Error: execution error: Error with dynamic library: LoadLibraryExW failed
+(in dbt_packages\codegen\macros\generate_base_model.sql:6:29)
+(in dbt_internal_packages\dbt-postgres\macros\adapters.sql:64:11)
+(in dbt_internal_packages\dbt-adapters\macros\etc\statement.sql:14:35)
+(in :2:29)
+(in dbt_packages\codegen\macros\generate_base_model.sql:9:26)
+  --> :2:29
 
 ==================== Execution Summary =====================
-Finished 'deps' with 1 error [284ms]
+Finished 'run-operation' with 1 error for target 'dev' [2.4s]
+[0m11:39:18.615043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024A772EE990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024A77329010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024A77328A90>]}
+
+
+============================== 11:39:18.637698 | a5255504-a5f0-4701-82da-4609377835da ==============================
+[0m11:39:18.637698 [info ] [MainThread]: Running with dbt=1.10.13
+[0m11:39:18.641737 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'profiles_dir': 'C:\\Users\\a897055\\OneDrive - ATOS\\Documents\\Veille_Technologique\\Demo\\DBT_SQLMESH_Veille\\dbt_project', 'printer_width': '80', 'target_path': 'None', 'use_colors': 'True', 'warn_error': 'None', 'static_parser': 'True', 'partial_parse': 'True', 'log_path': 'C:\\Users\\a897055\\OneDrive - ATOS\\Documents\\Veille_Technologique\\Demo\\DBT_SQLMESH_Veille\\dbt_project\\logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt deps', 'cache_selected_only': 'False', 'write_json': 'True'}
+[0m11:39:18.964328 [error] [MainThread]: Encountered an error:
+'version'
+[0m11:39:18.979429 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\cli\requires.py", line 178, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\cli\requires.py", line 254, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\cli\requires.py", line 290, in wrapper
+    project = load_project(
+              ^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\config\runtime.py", line 58, in load_project
+    project = Project.from_project_root(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\config\project.py", line 771, in from_project_root
+    return partial.render(renderer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\config\project.py", line 337, in render
+    return self.create_project(rendered)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\config\project.py", line 484, in create_project
+    packages: PackageConfig = package_config_from_data(
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\config\project.py", line 148, in package_config_from_data
+    PackageConfig.validate(packages_data)
+  File "C:\Users\a897055\OneDrive - ATOS\Documents\Veille_Technologique\Demo\DBT_SQLMESH_Veille\dbt_project\.venv\Lib\site-packages\dbt\contracts\project.py", line 141, in validate
+    if not package["version"]:
+           ~~~~~~~^^^^^^^^^^^
+KeyError: 'version'
+
+[0m11:39:18.986269 [debug] [MainThread]: Command `dbt deps` failed at 11:39:18.986269 after 0.69 seconds
+[0m11:39:18.991424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024A773726D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024A711D18D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024A711D1890>]}
+[0m11:39:18.994453 [debug] [MainThread]: Flushing usage events
+[0m11:39:21.239920 [debug] [MainThread]: An error was encountered while trying to flush usage events

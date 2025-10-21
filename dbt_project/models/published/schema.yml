@@ -1,15 +1,2 @@
 version: 2
 
-models:
-  - name: your_model_name
-    description: "This model is used for reporting and analysis."
-    columns:
-      - name: column_name_1
-        description: "Description of column 1."
-        tests:
-          - not_null
-          - unique
-      - name: column_name_2
-        description: "Description of column 2."
-        tests:
-          - not_null
