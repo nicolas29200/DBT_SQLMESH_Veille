@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: olist
-    schema: ecommerce    
+    schema: raw    
     database: raw         
     tables:
       - name: olist_customers_dataset
@@ -10,7 +10,7 @@ sources:
       - name: olist_order_items_dataset
       - name: olist_order_payments_dataset
       - name: olist_order_reviews_dataset
-      - name: olist_ellers_dataset
+      - name: olist_sellers_dataset
       - name: olist_products_dataset
       - name: product_category_name_translation
       - name: olist_geolocation_dataset

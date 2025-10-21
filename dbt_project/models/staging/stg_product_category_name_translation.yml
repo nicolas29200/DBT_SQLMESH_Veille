@@ -1,0 +1,12 @@
+models :
+    - name: stg_product_category_name_translation
+      description: Product category name translation data with basic cleaning and transformation applied, one row per category
+      columns:
+      - name: product_category_name
+        description: The original name of the product category.
+        tests:
+          - not_null
+      - name: product_category_name_english
+        description: The translated name of the product category in English.
+        tests:
+          - not_null

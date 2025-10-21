@@ -1,0 +1,21 @@
+models :
+  - name: stg_sellers
+    description: Seller data with basic cleaning and transformation applied, one row per seller.
+    columns:
+      - name: seller_id
+        description: The unique key for each seller.
+        tests:
+          - not_null
+          - unique
+      - name: seller_zip_code_prefix
+        description: The zip code prefix of the seller.
+        tests:
+          - not_null
+      - name: seller_city
+        description: The city of the seller.
+        tests:
+          - not_null  
+      - name: seller_state
+        description: The state of the seller.
+        tests:
+          - not_null

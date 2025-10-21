@@ -1,4 +1,5 @@
-name: dbt_project
+name: "olist_ecommerce"
+
 version: 1.0.0
 profile: postgres_env
 
@@ -10,9 +11,10 @@ seed-paths: ["seeds"]
 snapshot-paths: ["snapshots"]
 
 models:
-  staging:
-    +materialized: view
-  compute:
-    +materialized: table
-  published:
-    +materialized: table
+  olist_ecommerce:
+    staging:
+      +materialized: view
+#    compute:
+#      +materialized: table
+#    published:
+#      +materialized: table

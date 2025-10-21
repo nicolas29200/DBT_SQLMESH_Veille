@@ -1,0 +1,26 @@
+models :
+  - name: stg_order_reviews
+    description: Order reviews data with basic cleaning and transformation applied, one row per order review.
+    columns:
+      - name: review_id
+        description: The  key for each order review.
+        tests:
+          - not_null
+      - name: order_id
+        description: The  key for the order associated with the review.
+        tests:
+          - not_null
+      - name: review_score
+        description: The score given in the review (1 to 5).
+        tests:
+          - not_null
+      - name: review_comment_title
+        description: The title of the review comment.
+      - name: review_comment_message
+        description: The message of the review comment.
+      - name: review_creation_date
+        description: The date when the review was created.
+        tests:
+          - not_null
+      - name: review_answer_timestamp
+        description: The timestamp when the review was answered.

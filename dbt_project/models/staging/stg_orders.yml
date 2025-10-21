@@ -1,0 +1,39 @@
+models :
+  - name: stg_orders 
+    description: Order data with basic cleaning and transformation applied, one row per order.
+    columns:
+      - name: order_id
+        description: The unique key for each order.
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: The unique key for the customer who placed the order.
+        tests:
+          - not_null
+          - unique
+      - name: order_status
+        description: The current status of the order (e.g., delivered, shipped).
+        tests:
+          - not_null
+      - name: order_purchase_timestamp
+        description: The timestamp when the order was purchased.
+        tests:
+          - not_null
+      - name: order_approved_at
+        description: The timestamp when the order was approved.
+        tests:
+          - not_null
+      - name: order_delivered_carrier_date
+        description: The date when the order was delivered to the carrier.
+        tests:
+          - not_null
+      - name: order_delivered_customer_date
+        description: The date when the order was delivered to the customer.
+        tests:
+          - not_null
+      - name: order_estimated_delivery_date
+        description: The estimated date for order delivery.
+        tests:
+          - not_null
+        
