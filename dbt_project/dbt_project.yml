@@ -1,8 +1,8 @@
 name: dbt_project
 version: 1.0.0
-profile: your_profile_name
+profile: postgres_env
 
-source-paths: ["models"]
+model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 macro-paths: ["macros"]

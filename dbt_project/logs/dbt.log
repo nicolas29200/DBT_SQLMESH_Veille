@@ -1,0 +1,6 @@
+dbt-fusion 2.0.0-preview.45
+   Loading ~/.dbt/profiles.yml
+error: dbt1001: Profile 'postgres_env' not found in profiles.yml
+
+==================== Execution Summary =====================
+Finished 'deps' with 1 error [284ms]
