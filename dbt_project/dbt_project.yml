@@ -14,7 +14,7 @@ models:
   olist_ecommerce:
     staging:
       +materialized: view
-#    compute:
-#      +materialized: table
-#    published:
-#      +materialized: table
+    compute:
+      +materialized: table
+    published:
+      +materialized: table

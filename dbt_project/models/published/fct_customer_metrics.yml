@@ -1,0 +1,26 @@
+models :
+  - name : fct_customer_metrics
+    description : "Fact table containing customer metrics such as total orders, total spent, and average order value."
+    columns :
+      - name : customer_unique_id
+        description : "Unique identifier for each customer."
+        tests :
+          - not_null
+          - unique
+      - name : nb_orders
+        description : "Total number of orders placed by the customer."
+        tests :
+          - not_null
+      - name : total_revenue
+        description : "Total amount spent by the customer across all orders."
+      - name : avg_order_value
+        description : "Average value of orders placed by the customer."
+      - name : last_purchase_date
+        type : date
+        description : "Date of the customer's most recent order."
+        tests :
+          - not_null
+      - name : days_since_last_order
+        description : "Number of days since the customer's last order."
+        tests :
+          - not_null

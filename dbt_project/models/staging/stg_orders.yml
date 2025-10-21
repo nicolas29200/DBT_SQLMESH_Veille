@@ -17,22 +17,21 @@ models :
         tests:
           - not_null
       - name: order_purchase_timestamp
+        type: timestamp
         description: The timestamp when the order was purchased.
         tests:
           - not_null
       - name: order_approved_at
+        type: timestamp
         description: The timestamp when the order was approved.
-        tests:
-          - not_null
       - name: order_delivered_carrier_date
+        type: timestamp
         description: The date when the order was delivered to the carrier.
-        tests:
-          - not_null
       - name: order_delivered_customer_date
+        type: timestamp
         description: The date when the order was delivered to the customer.
-        tests:
-          - not_null
       - name: order_estimated_delivery_date
+        type: timestamp
         description: The estimated date for order delivery.
         tests:
           - not_null

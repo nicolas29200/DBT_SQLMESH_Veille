@@ -1,0 +1,31 @@
+models :
+  - name: int_orders_enriched
+    description: Enriched orders data combining order details with customer and order items information.
+    columns:
+      - name: order_id
+        description: The unique identifier for each order.
+        tests:
+          - not_null
+      - name: customer_id
+        description: The unique identifier for the customer who placed the order.
+        tests:
+          - not_null
+      - name: order_status
+        description: The current status of the order (e.g., delivered, shipped, canceled).
+        tests:
+          - not_null
+      - name: order_purchase_timestamp
+        type: timestamp
+        description: The timestamp when the order was purchased.
+        tests:
+          - not_null
+      - name: total_price
+        description: The total price of the order.
+      - name: total_freight
+        description: The total freight cost for the order.
+      - name: total_payment
+        description: The total payment amount made for the order.
+      - name: max_installments
+        description: The maximum number of installments chosen for the payment.
+      - name: avg_review_score
+        description: The average review score given by the customer for the order.

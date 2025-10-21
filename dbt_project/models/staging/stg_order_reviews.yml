@@ -19,8 +19,10 @@ models :
       - name: review_comment_message
         description: The message of the review comment.
       - name: review_creation_date
+        type: date
         description: The date when the review was created.
         tests:
           - not_null
       - name: review_answer_timestamp
+        type: timestamp
         description: The timestamp when the review was answered.

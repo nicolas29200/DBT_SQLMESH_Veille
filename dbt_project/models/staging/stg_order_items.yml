@@ -19,6 +19,7 @@ models :
         tests:
           - not_null
       - name: shipping_limit_date
+        type: timestamp
         description: The date by which the order item should be shipped.
         tests:
           - not_null
