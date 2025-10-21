@@ -1,0 +1,26 @@
+name: dbt_project
+version: 1.0.0
+profile: your_profile_name
+
+source-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+
+models:
+  staging:
+    materialized: view
+  compute:
+    materialized: table
+  published:
+    materialized: table
+
+seeds:
+  your_seed_name:
+    file: seed_data.csv
+
+snapshots:
+  your_snapshot_name:
+    target: snapshot.sql

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: staging_model_name
+    description: "This model is used for staging data."
+    columns:
+      - name: column_name_1
+        description: "Description for column_name_1"
+        tests:
+          - not_null
+          - unique
+      - name: column_name_2
+        description: "Description for column_name_2"
+        tests:
+          - not_null

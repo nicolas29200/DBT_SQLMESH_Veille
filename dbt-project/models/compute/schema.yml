@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: intermediate_model_name
+    description: "Description of the intermediate model."
+    columns:
+      - name: column_name_1
+        description: "Description of column 1."
+        tests:
+          - not_null
+          - unique
+      - name: column_name_2
+        description: "Description of column 2."
+      - name: column_name_3
+        description: "Description of column 3."
