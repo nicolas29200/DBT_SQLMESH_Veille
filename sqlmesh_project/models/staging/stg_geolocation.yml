@@ -1,0 +1,24 @@
+models :
+  - name: stg_geolocation
+    description: Geolocation data with basic cleaning and transformation applied, one row per geolocation entry.
+    columns:
+      - name: geolocation_zip_code_prefix
+        description: The zip code prefix of the geolocation.
+        tests:
+          - not_null
+      - name: geolocation_lat
+        description: The latitude of the geolocation.
+        tests:
+          - not_null
+      - name: geolocation_lng
+        description: The longitude of the geolocation.
+        tests:
+          - not_null
+      - name: geolocation_city
+        description: The city of the geolocation.
+        tests:
+          - not_null  
+      - name: geolocation_state
+        description: The state of the geolocation.
+        tests:
+          - not_null

@@ -1,0 +1,25 @@
+models:
+  - name: stg_customers
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: customer_id
+        description: The unique key for each customer.
+        tests:
+          - not_null
+          - unique
+      - name: customer_unique_id
+        description: A identifier for each customer across multiple orders.  
+        tests:
+          - not_null
+      - name: customer_zip_code_prefix
+        description: The zip code prefix of the customer.
+        tests:
+          - not_null
+      - name: customer_city
+        description: The city of the customer.
+        tests:
+          - not_null  
+      - name: customer_state
+        description: The state of the customer.
+        tests:
+          - not_null

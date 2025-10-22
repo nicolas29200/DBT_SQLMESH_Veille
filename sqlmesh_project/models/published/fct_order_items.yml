@@ -1,0 +1,22 @@
+models:
+  - name: fct_order_items
+    description: "Fact table containing order items enriched with product category and review score."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+      - name: product_id
+        description: "Unique identifier for each product."
+      - name: seller_id
+        description: "Unique identifier for each seller."
+      - name: product_category_name_english
+        description: "Category of the product in English."
+      - name: price
+        description: "Price of the order item."
+      - name: freight_value
+        description: "Freight value associated with the order item."
+      - name: review_score
+        description: "Review score associated with the order."
+      - name: review_comment_message
+        description: "Comment message from the review."
+      - name: review_creation_date
+        description: "Date when the review was created."
