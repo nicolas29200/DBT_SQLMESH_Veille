@@ -19,7 +19,7 @@ models:
         description: The total price of the order.
       - name: total_freight
         description: The total freight cost associated with the order.  
-      - name: total_payment
+      - name: total_payments
         description: The total payment amount for the order.
       - name: max_installments
         description: The maximum number of installments chosen for the payment.

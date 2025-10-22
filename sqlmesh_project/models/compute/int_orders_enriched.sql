@@ -27,9 +27,9 @@ SELECT
   o.customer_id,
   o.order_status,
   o.order_purchase_timestamp,
-  i.total_price,
+  i.total_price as total_price,
   i.total_freight,
-  p.total_payment,
+  p.total_payment as total_payments,
   p.max_installments,
   r.avg_review_score
 FROM orders o
