@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: olist
     schema: raw    
-    database: demoDBT         
+    database: demosqlmesh         
     tables:
       - name: olist_customers_dataset
       - name: olist_orders_dataset
