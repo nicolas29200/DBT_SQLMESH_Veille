@@ -31,7 +31,9 @@ Thumbs.db
 # Logs
 *.log
 logs/
+dbt.log
 dbt_project/logs/
+dbt_project\logs\dbt.log
 # Local development files
 profiles.yml
 !example_profiles.yml
