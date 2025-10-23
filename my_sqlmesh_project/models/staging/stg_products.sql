@@ -1,6 +1,11 @@
 MODEL (
   name models.stg_products,
-  kind VIEW
+  kind VIEW,
+  description "Staging table for products data",
+  audits (
+        UNIQUE_VALUES(columns=(product_id)),
+        NOT_NULL(columns=(product_id))
+    )
 );
 
 with source as (

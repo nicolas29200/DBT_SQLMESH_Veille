@@ -1,6 +1,10 @@
 MODEL (
   name models.stg_order_reviews,
-  kind VIEW
+  kind VIEW,
+  description 'Order reviews data with basic cleaning and transformation applied, one row per order review.',
+    audits (
+        NOT_NULL(columns=(review_id,order_id,review_score,review_creation_date))
+    )
 );
 
 with source as (

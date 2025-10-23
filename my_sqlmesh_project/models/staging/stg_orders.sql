@@ -1,6 +1,11 @@
 MODEL (
   name models.stg_orders,
-  kind VIEW
+  kind VIEW,
+  description "Staging table for orders data",
+  audits (
+        UNIQUE_VALUES(columns=(order_id,customer_id)),
+        NOT_NULL(columns=(order_id,customer_id,order_status,order_purchase_timestamp,order_estimated_delivery_date))
+    )
 );
 
 with source as (

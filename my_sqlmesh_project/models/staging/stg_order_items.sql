@@ -1,6 +1,10 @@
 MODEL (
   name models.stg_order_items,
-  kind VIEW
+  kind VIEW,
+  description 'Order items data with basic cleaning and transformation applied, one row per order item.',
+  audits (
+    NOT_NULL(columns=(order_id,order_item_id,product_id,seller_id,shipping_limit_date,price,freight_value))
+  )
 );
 
 with source as (
