@@ -1,0 +1,22 @@
+test_full_model:
+  model: ibis.full_model
+  inputs:
+    ibis.incremental_model:
+      - id: 1
+        item_id: 1
+        event_date: '2023-01-01'
+      - id: 2
+        item_id: 2
+        event_date: '2023-01-01'
+      - id: 3
+        item_id: 2
+        event_date: '2023-01-01'
+  outputs:
+    query:
+      - item_id: 1
+        num_orders: 1
+      - item_id: 2
+        num_orders: 2
+  vars:
+    start: 2023-01-01
+    end: 2023-01-01

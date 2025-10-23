@@ -2,9 +2,9 @@ MODEL (
     name ibis.incremental_model,
     kind INCREMENTAL_BY_TIME_RANGE (
         time_column event_date,
-        lookback 2,
+        lookback 2 ,
     ),
-    cron '@daily',
+    start '2020-01-01',
     grain (id, event_date)
 );
 
