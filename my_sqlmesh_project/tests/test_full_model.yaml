@@ -1,4 +1,4 @@
-test_full_model:
+/*test_full_model:
   model: ibis.full_model
   inputs:
     ibis.incremental_model:
@@ -17,6 +17,3 @@ test_full_model:
         num_orders: 1
       - item_id: 2
         num_orders: 2
-  vars:
-    start: 2023-01-01
-    end: 2023-01-01

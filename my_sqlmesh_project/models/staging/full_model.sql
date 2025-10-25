@@ -7,8 +7,8 @@ MODEL (
 );
 
 SELECT
-    item_id,
-    COUNT(DISTINCT id) AS num_orders,
+    item_id::int as item_id,
+    COUNT(DISTINCT id)::bigint AS num_orders
 FROM
     ibis.incremental_model
 GROUP BY item_id

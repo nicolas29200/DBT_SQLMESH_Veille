@@ -1,0 +1,27 @@
+test_incremental_model:
+  model: ibis.incremental_model
+  inputs:
+    ibis.seed_model:
+    - id: 1
+      item_id: 2
+      event_date: 2020-01-01
+    - id: 2
+      item_id: 1
+      event_date: 2020-01-01
+    - id: 3
+      item_id: 3
+      event_date: 2020-01-03
+  outputs:
+    query:
+    - id: 1
+      item_id: 2
+      event_date: 2020-01-01
+    - id: 2
+      item_id: 1
+      event_date: 2020-01-01
+    - id: 3
+      item_id: 3
+      event_date: 2020-01-03
+  vars:
+    start: '2020-01-01'
+    end: '2020-01-04'

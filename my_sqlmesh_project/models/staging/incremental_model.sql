@@ -9,9 +9,9 @@ MODEL (
 );
 
 SELECT
-    id,
-    item_id,
-    event_date,
+    id::int as id,
+    item_id::int as item_id,
+    event_date::date as event_date
 FROM
     ibis.seed_model
 WHERE
